@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_e/theme.dart';
+import 'package:food_e/widget/header.dart';
 import 'package:food_e/widget/text_field_and_label.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -18,21 +19,10 @@ class RegisterPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/icons/close.png',
-                    width: 22,
-                    height: 22,
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  Text(
-                    'Register',
-                    style: headingOne.copyWith(
-                      fontSize: 36,
-                      color: darkColor,
-                      fontWeight: FontWeight.w500,
-                    ),
+                  Header(
+                    headerTitle: 'REGISTER',
+                    isSubTitle: false,
+                    subTitle: '',
                   ),
                   SizedBox(
                     height: 130,
@@ -80,8 +70,7 @@ class RegisterPage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'REGISTER',
-                        style: headingOne.copyWith(
-                          fontSize: 18,
+                        style: headingThreeText.copyWith(
                           color: whiteColor,
                         ),
                       ),
@@ -96,15 +85,13 @@ class RegisterPage extends StatelessWidget {
                       Text.rich(
                         TextSpan(
                             text: 'Already have an account? ',
-                            style: headingOne.copyWith(
-                              fontSize: 14,
+                            style: bodyText.copyWith(
                               color: grayColor,
                             ),
                             children: [
                               TextSpan(
                                 text: 'Login',
-                                style: headingOne.copyWith(
-                                  fontSize: 14,
+                                style: bodyText.copyWith(
                                   color: secondaryColor,
                                 ),
                               ),

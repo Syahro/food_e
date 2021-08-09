@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 final double defaultMargin = 20.0;
 
@@ -16,5 +17,37 @@ Color secondaryLightColor = Color(0XFFFAAC52);
 Color secondaryColor = Color(0XFFF99928);
 Color secondaryDarkColor = Color(0XFFDF7B07);
 
-TextStyle headingOne = TextStyle(fontFamily: 'Heading');
-TextStyle headingRegular = TextStyle(fontFamily: 'Heading-Thin');
+TextStyle headingOneText = GoogleFonts.bebasNeue(
+  fontWeight: FontWeight.w400,
+  fontSize: 36,
+);
+
+TextStyle headingTwoTet = GoogleFonts.bebasNeue(
+  fontWeight: FontWeight.w400,
+  fontSize: 24,
+);
+
+TextStyle headingThreeText = GoogleFonts.bebasNeue(
+  fontWeight: FontWeight.w400,
+  fontSize: 18,
+);
+
+TextStyle labelText = GoogleFonts.bebasNeue(
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+);
+
+TextStyle bodyText = GoogleFonts.poppins(
+  fontWeight: FontWeight.w500,
+  fontSize: 14,
+);
+
+TextStyle inputText = GoogleFonts.poppins(
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
+);
+
+TextStyle bigBodyText = GoogleFonts.poppins(
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+);

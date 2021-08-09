@@ -20,8 +20,7 @@ class TextFieldAndLabel extends StatelessWidget {
           padding: EdgeInsets.only(left: 20),
           child: Text(
             label,
-            style: headingOne.copyWith(
-              fontSize: 12,
+            style: labelText.copyWith(
               color: primaryColor,
             ),
           ),
@@ -47,8 +46,7 @@ class TextFieldAndLabel extends StatelessWidget {
                   children: [
                     Text(
                       infoText,
-                      style: headingRegular.copyWith(
-                        fontSize: 14,
+                      style: inputText.copyWith(
                         color: grayColor,
                       ),
                     ),
