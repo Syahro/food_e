@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/forgot_password_page.dart';
 import 'package:food_e/pages/register_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/button_bottom.dart';
@@ -45,16 +46,16 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   InkWell(
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) {
-
-                    //       },
-                    //     ),
-                    //   );
-                    // },
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ForgotPasswordPage();
+                          },
+                        ),
+                      );
+                    },
                     child: Text(
                       'Forgot Password',
                       style: bodyText.copyWith(
