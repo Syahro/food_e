@@ -5,11 +5,19 @@ class Header extends StatelessWidget {
   final String headerTitle;
   final bool isSubTitle;
   final String subTitle;
+  final bool isStyle;
+  final String subTitleStyle;
+  final Color colorStyle;
+  final String subTitleAfterStyle;
 
   Header({
     this.headerTitle,
     this.isSubTitle,
     this.subTitle,
+    this.isStyle,
+    this.subTitleStyle,
+    this.colorStyle,
+    this.subTitleAfterStyle,
   });
   @override
   Widget build(BuildContext context) {
@@ -33,11 +41,17 @@ class Header extends StatelessWidget {
         isSubTitle
             ? Padding(
                 padding: EdgeInsets.only(top: 10),
-                child: Text(
-                  'We’ll send a password reset link to your email.',
-                  style: bodyText.copyWith(
-                    color: grayColor,
-                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      subTitle,
+                      style: bodyText.copyWith(
+                        color: grayColor,
+                      ),
+                    ),
+                    
+                  ],
                 ),
               )
             : Container(),

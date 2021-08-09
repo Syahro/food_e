@@ -34,7 +34,7 @@ class ForgotPasswordPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              ButtonBottom('LOGIN'),
+              ButtonBottom('SEND A EMAIL'),
             ],
           ),
         ),

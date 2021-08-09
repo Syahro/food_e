@@ -13,7 +13,16 @@ class ButtonBottom extends StatelessWidget {
       height: 40,
       width: MediaQuery.of(context).size.width - (2 * defaultMargin),
       child: RaisedButton(
-        onPressed: () {},
+        onPressed: () {
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) {
+          //       return context;
+          //     },
+          //   ),
+          // );
+        },
         color: primaryColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
