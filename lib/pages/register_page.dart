@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/login_page.dart';
 import 'package:food_e/theme.dart';
+import 'package:food_e/widget/button_bottom.dart';
 import 'package:food_e/widget/header.dart';
 import 'package:food_e/widget/text_field_and_label.dart';
 
@@ -59,44 +61,33 @@ class RegisterPage extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Container(
-                    height: 40,
-                    width:
-                        MediaQuery.of(context).size.width - (2 * defaultMargin),
-                    decoration: BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'REGISTER',
-                        style: headingThreeText.copyWith(
-                          color: whiteColor,
-                        ),
-                      ),
-                    ),
-                  ),
+                  ButtonBottom('REGISTER'),
                   SizedBox(
                     height: 30,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text.rich(
-                        TextSpan(
-                            text: 'Already have an account? ',
-                            style: bodyText.copyWith(
-                              color: grayColor,
-                            ),
-                            children: [
-                              TextSpan(
-                                text: 'Login',
-                                style: bodyText.copyWith(
-                                  color: secondaryColor,
-                                ),
-                              ),
-                            ]),
-                      )
+                      Text(
+                        'Already have an account? ',
+                        style: bodyText.copyWith(
+                          color: grayColor,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return LoginPage();
+                          }));
+                        },
+                        child: Text(
+                          'Login',
+                          style: bodyText.copyWith(
+                            color: secondaryColor,
+                          ),
+                        ),
+                      ),
                     ],
                   )
                 ],
