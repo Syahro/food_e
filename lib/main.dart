@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_e/pages/address_page.dart';
+import 'package:food_e/pages/payment_setup_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AddressPage(),
+      home: PaymentSetupPage(),
     );
   }
 }
