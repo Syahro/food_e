@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/search_category_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
+import 'package:food_e/widget/categories_show.dart';
 import 'package:food_e/widget/menu_card.dart';
 import 'package:food_e/widget/search.dart';
 
@@ -42,26 +44,7 @@ class SearchActivePage extends StatelessWidget {
                       color: primaryColor,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: defaultMargin,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Lunch',
-                            style: bodyText.copyWith(color: whiteColor),
-                          ),
-                          Image.asset(
-                            'assets/icons/close.png',
-                            width: 20,
-                            height: 20,
-                            color: whiteColor,
-                          ),
-                        ],
-                      ),
-                    ),
+                    child: CategoriesShow('Lunch', 114, true),
                   ),
                 ],
               ),
