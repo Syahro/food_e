@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/search_active_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/recent_search.dart';
@@ -27,10 +28,22 @@ class SearchInputPage extends StatelessWidget {
             SizedBox(
               height: 70,
             ),
-            Search(
-              placeHolderText: 'Cuisine / Dish',
-              isClicked: true,
-              isType: false,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SearchActivePage();
+                    },
+                  ),
+                );
+              },
+              child: Search(
+                placeHolderText: 'Cuisine / Dish',
+                isClicked: true,
+                isType: false,
+              ),
             ),
             SizedBox(
               height: 30,
