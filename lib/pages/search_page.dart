@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/search_empty_page.dart';
 import 'package:food_e/pages/search_input_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
@@ -36,6 +37,16 @@ class SearchPage extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) {
                       return SearchInputPage();
+                    },
+                  ),
+                );
+              },
+              onDoubleTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SearchEmptyPage();
                     },
                   ),
                 );
