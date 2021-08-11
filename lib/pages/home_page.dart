@@ -8,7 +8,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: BottomFloating(),
+      floatingActionButton: BottomFloating(
+        isHome: true,
+        isSearch: false,
+        isBasket: false,
+        isLove: false,
+        isUser: false,
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: whiteColor,
       body: SafeArea(

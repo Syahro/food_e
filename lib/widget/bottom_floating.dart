@@ -3,6 +3,19 @@ import 'package:food_e/theme.dart';
 import 'package:food_e/widget/icon_floating.dart';
 
 class BottomFloating extends StatelessWidget {
+  final bool isHome;
+  final bool isSearch;
+  final bool isBasket;
+  final bool isLove;
+  final bool isUser;
+
+  BottomFloating({
+    this.isHome,
+    this.isSearch,
+    this.isBasket,
+    this.isLove,
+    this.isUser,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,23 +28,23 @@ class BottomFloating extends StatelessWidget {
         children: [
           IconFloating(
             imageUrl: 'assets/icons/home.png',
-            isActive: true,
+            isActive: isHome,
           ),
           IconFloating(
             imageUrl: 'assets/icons/search.png',
-            isActive: false,
+            isActive: isSearch,
           ),
           IconFloating(
             imageUrl: 'assets/icons/basket.png',
-            isActive: false,
+            isActive: isBasket,
           ),
           IconFloating(
             imageUrl: 'assets/icons/favourite.png',
-            isActive: false,
+            isActive: isLove,
           ),
           IconFloating(
             imageUrl: 'assets/icons/user.png',
-            isActive: false,
+            isActive: isUser,
           ),
         ],
       ),
