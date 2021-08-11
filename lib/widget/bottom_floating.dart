@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/home_page.dart';
+import 'package:food_e/pages/search_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/icon_floating.dart';
 
@@ -26,13 +28,37 @@ class BottomFloating extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconFloating(
-            imageUrl: 'assets/icons/home.png',
-            isActive: isHome,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return HomePage();
+                  },
+                ),
+              );
+            },
+            child: IconFloating(
+              imageUrl: 'assets/icons/home.png',
+              isActive: isHome,
+            ),
           ),
-          IconFloating(
-            imageUrl: 'assets/icons/search.png',
-            isActive: isSearch,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SearchPage();
+                  },
+                ),
+              );
+            },
+            child: IconFloating(
+              imageUrl: 'assets/icons/search.png',
+              isActive: isSearch,
+            ),
           ),
           IconFloating(
             imageUrl: 'assets/icons/basket.png',
