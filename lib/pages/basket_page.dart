@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/checkout_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/basket_card.dart';
 import 'package:food_e/widget/bottom_floating.dart';
@@ -77,7 +78,16 @@ class BasketPage extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return CheckoutPage();
+                        },
+                      ),
+                    );
+                  },
                   color: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
