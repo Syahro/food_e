@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_e/pages/basket_page.dart';
 import 'package:food_e/pages/home_page.dart';
+import 'package:food_e/pages/like_page.dart';
 import 'package:food_e/pages/search_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/icon_floating.dart';
@@ -77,9 +78,21 @@ class BottomFloating extends StatelessWidget {
               isActive: isBasket,
             ),
           ),
-          IconFloating(
-            imageUrl: 'assets/icons/favourite.png',
-            isActive: isLove,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return LikePage();
+                  },
+                ),
+              );
+            },
+            child: IconFloating(
+              imageUrl: 'assets/icons/favourite.png',
+              isActive: isLove,
+            ),
           ),
           IconFloating(
             imageUrl: 'assets/icons/user.png',
