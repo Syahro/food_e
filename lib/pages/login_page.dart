@@ -30,6 +30,7 @@ class LoginPage extends StatelessWidget {
                 label: 'EMAIL',
                 infoText: 'johndoe@email.com',
                 isPassword: false,
+                isDrop: false,
               ),
               SizedBox(
                 height: 30,
@@ -38,6 +39,7 @@ class LoginPage extends StatelessWidget {
                 label: 'PASSWORD',
                 infoText: 'Password',
                 isPassword: true,
+                isDrop: false,
               ),
               SizedBox(
                 height: 10,

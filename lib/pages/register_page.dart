@@ -33,6 +33,7 @@ class RegisterPage extends StatelessWidget {
                     label: 'FULL NAME',
                     infoText: 'John Doe',
                     isPassword: false,
+                    isDrop: false,
                   ),
                   SizedBox(
                     height: 30,
@@ -41,6 +42,7 @@ class RegisterPage extends StatelessWidget {
                     label: 'EMAIL',
                     infoText: 'johndoe@email.com',
                     isPassword: false,
+                    isDrop: false,
                   ),
                   SizedBox(
                     height: 30,
@@ -49,6 +51,7 @@ class RegisterPage extends StatelessWidget {
                     label: 'PHONE',
                     infoText: '+00 123 456 7890',
                     isPassword: false,
+                    isDrop: false,
                   ),
                   SizedBox(
                     height: 30,
@@ -57,6 +60,7 @@ class RegisterPage extends StatelessWidget {
                     label: 'PASSWORD',
                     infoText: 'Password',
                     isPassword: true,
+                    isDrop: false,
                   ),
                   SizedBox(
                     height: 50,

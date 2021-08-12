@@ -29,6 +29,7 @@ class ResetPasswordPage extends StatelessWidget {
                 label: 'NEW PASSWORD',
                 infoText: 'Password',
                 isPassword: true,
+                isDrop: false,
               ),
               SizedBox(
                 height: 30,
@@ -37,6 +38,7 @@ class ResetPasswordPage extends StatelessWidget {
                 label: 'CONFIRM PASSWORD',
                 infoText: 'Confirm Password',
                 isPassword: true,
+                isDrop: false,
               ),
               Spacer(),
               ButtonBottom('RESET PASSWORD'),

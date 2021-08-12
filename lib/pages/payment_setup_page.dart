@@ -5,6 +5,15 @@ import 'package:food_e/widget/header.dart';
 import 'package:food_e/widget/text_field_and_label.dart';
 
 class PaymentSetupPage extends StatelessWidget {
+  final bool isPaymentSetup;
+  final String headerTitle;
+  final bool isSkip;
+
+  PaymentSetupPage({
+    this.isPaymentSetup,
+    this.headerTitle,
+    this.isSkip,
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +28,8 @@ class PaymentSetupPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Header(
-                headerTitle: 'PAYMENT SETUP',
+                headerTitle:
+                    isPaymentSetup ? 'PAYMENT SETUP' : headerTitle,
                 isSubTitle: false,
                 subTitle: '',
               ),
@@ -29,6 +39,7 @@ class PaymentSetupPage extends StatelessWidget {
                     label: 'CARD NUMBER',
                     infoText: 'XXXX - XXXX - XXXX',
                     isPassword: false,
+                    isDrop: false,
                   ),
                   SizedBox(
                     height: 30,
@@ -45,6 +56,7 @@ class PaymentSetupPage extends StatelessWidget {
                           label: 'EXPIRED DATE',
                           infoText: 'MM / YY',
                           isPassword: false,
+                          isDrop: false,
                         ),
                       ),
                       Container(
@@ -56,6 +68,7 @@ class PaymentSetupPage extends StatelessWidget {
                           label: 'CVV',
                           infoText: 'X X X',
                           isPassword: false,
+                          isDrop: false,
                         ),
                       )
                     ],
@@ -64,15 +77,19 @@ class PaymentSetupPage extends StatelessWidget {
                     height: 50,
                   ),
                   ButtonBottom('ADD CARD'),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    'Skip for now',
-                    style: bodyText.copyWith(
-                      color: grayColor,
-                    ),
-                  ),
+                  isSkip
+                      ? Padding(
+                          padding: EdgeInsets.only(top: 30),
+                          child: Text(
+                            'Skip for now',
+                            style: bodyText.copyWith(
+                              color: grayColor,
+                            ),
+                          ),
+                        )
+                      : SizedBox(
+                          height: 0,
+                        ),
                 ],
               ),
             ],

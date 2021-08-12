@@ -5,11 +5,13 @@ class TextFieldAndLabel extends StatelessWidget {
   final String label;
   final String infoText;
   final bool isPassword;
+  final bool isDrop;
 
   TextFieldAndLabel({
     this.label,
     this.infoText,
     this.isPassword,
+    this.isDrop,
   });
   @override
   Widget build(BuildContext context) {
@@ -57,7 +59,19 @@ class TextFieldAndLabel extends StatelessWidget {
                             height: 16.5,
                             color: primaryColor,
                           )
-                        : Container(),
+                        : SizedBox(
+                            width: 0,
+                          ),
+                    isDrop
+                        ? Image.asset(
+                            'assets/icons/dropdown.png',
+                            width: 22,
+                            height: 22,
+                            color: primaryColor,
+                          )
+                        : SizedBox(
+                            width: 0,
+                          ),
                   ],
                 ),
               ],

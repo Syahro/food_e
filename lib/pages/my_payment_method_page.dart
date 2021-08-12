@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/payment_setup_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/header.dart';
@@ -113,7 +114,20 @@ class MyPaymentMethodPage extends StatelessWidget {
                 height: 40,
                 width: double.infinity,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return PaymentSetupPage(
+                            isPaymentSetup: false,
+                            headerTitle: 'ADD NEW CARD',
+                            isSkip: false,
+                          );
+                        },
+                      ),
+                    );
+                  },
                   color: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

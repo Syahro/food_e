@@ -55,6 +55,7 @@ class SearchPage extends StatelessWidget {
                 placeHolderText: 'Cuisine / Dish',
                 isClicked: false,
                 isType: false,
+                
               ),
             ),
             SizedBox(

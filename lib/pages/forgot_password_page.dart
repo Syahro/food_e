@@ -30,6 +30,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 infoText: 'johndoe@email.com',
                 label: 'EMAIL',
                 isPassword: false,
+                isDrop: false,
               ),
               SizedBox(
                 height: 30,
