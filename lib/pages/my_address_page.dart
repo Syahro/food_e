@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_e/pages/my_address_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/header.dart';
 
-class CheckoutPage extends StatelessWidget {
+class MyAddressPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +18,9 @@ class CheckoutPage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -27,31 +28,31 @@ class CheckoutPage extends StatelessWidget {
                 height: 50,
               ),
               Header(
-                headerTitle: 'CHECKOUT',
+                headerTitle: 'MY ADDRESS',
                 isSubTitle: false,
                 subTitle: '',
               ),
               Spacer(),
               Text(
-                'PRICE',
+                'PARTY PLACE',
                 style: labelText.copyWith(
-                  color: darkColor,
+                  color: secondaryColor,
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
               Text(
-                '\$ 65.00',
-                style: headingOneText.copyWith(
-                  color: primaryColor,
+                'Apt. 12, Watson Bldg., 13th Ave. and St. James St., 406035',
+                style: bodyText.copyWith(
+                  color: darkColor,
                 ),
               ),
               SizedBox(
                 height: 50,
               ),
               Text(
-                'DELIVER TO',
+                'OFFICE',
                 style: labelText.copyWith(
                   color: darkColor,
                 ),
@@ -59,40 +60,17 @@ class CheckoutPage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Home',
-                    style: bodyText.copyWith(
-                      color: darkColor,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return MyAddressPage();
-                          },
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Change',
-                      style: bodyText.copyWith(
-                        color: secondaryColor,
-                      ),
-                    ),
-                  ),
-                ],
+              Text(
+                'Suite 03, Johnson Business Park, 554537',
+                style: bodyText.copyWith(
+                  color: grayColor,
+                ),
               ),
               SizedBox(
                 height: 50,
               ),
               Text(
-                'PAYMENT METHOD',
+                'HOME',
                 style: labelText.copyWith(
                   color: darkColor,
                 ),
@@ -100,29 +78,18 @@ class CheckoutPage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'XXXX XXXX XXXX 2538',
-                    style: bodyText.copyWith(
-                      color: darkColor,
-                    ),
-                  ),
-                  Text(
-                    'Change',
-                    style: bodyText.copyWith(
-                      color: secondaryColor,
-                    ),
-                  ),
-                ],
+              Text(
+                'Apt. 12, Watson Bldg., 13th Ave. and St. James St., 406035',
+                style: bodyText.copyWith(
+                  color: grayColor,
+                ),
               ),
               SizedBox(
                 height: 50,
               ),
               Container(
-                width: double.infinity,
                 height: 40,
+                width: double.infinity,
                 child: RaisedButton(
                   onPressed: () {},
                   color: primaryColor,
@@ -130,7 +97,7 @@ class CheckoutPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
-                    'CONFIRM ORDER',
+                    'ADD NEW ADDRESS',
                     style: headingThreeText.copyWith(
                       color: whiteColor,
                     ),
