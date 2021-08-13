@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_e/pages/account_and_profile_page.dart';
+import 'package:food_e/pages/my_address_page.dart';
+import 'package:food_e/pages/my_payment_method_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/user_menu.dart';
@@ -73,13 +75,41 @@ class ProfilePage extends StatelessWidget {
                     menuTitle: 'Account and Profile',
                   ),
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/wallet.png',
-                  menuTitle: 'Manage Payment Methods',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return MyPaymentMethodPage(
+                            fromAkun: true,
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/wallet.png',
+                    menuTitle: 'Manage Payment Methods',
+                  ),
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/location.png',
-                  menuTitle: 'Manage Addresses',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return MyAddressPage(
+                            fromAkun: true,
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/location.png',
+                    menuTitle: 'Manage Addresses',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/history.png',

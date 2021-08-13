@@ -76,7 +76,9 @@ class CheckoutPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return MyAddressPage();
+                            return MyAddressPage(
+                              fromAkun: false,
+                            );
                           },
                         ),
                       );
@@ -117,7 +119,9 @@ class CheckoutPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return MyPaymentMethodPage();
+                            return MyPaymentMethodPage(
+                              fromAkun: false,
+                            );
                           },
                         ),
                       );

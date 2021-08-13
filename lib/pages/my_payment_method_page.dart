@@ -5,6 +5,11 @@ import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/header.dart';
 
 class MyPaymentMethodPage extends StatelessWidget {
+  final bool fromAkun;
+
+  MyPaymentMethodPage({
+    this.fromAkun,
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,9 +17,9 @@ class MyPaymentMethodPage extends StatelessWidget {
       floatingActionButton: BottomFloating(
         isHome: false,
         isSearch: false,
-        isBasket: true,
+        isBasket: fromAkun ? false : true,
         isLove: false,
-        isUser: false,
+        isUser: fromAkun ? true : false,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
