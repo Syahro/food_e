@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/account_and_profile_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/user_menu.dart';
@@ -56,9 +57,21 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/pencil.png',
-                  menuTitle: 'Account and Profile',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return AccountAndProfilePage();
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/pencil.png',
+                    menuTitle: 'Account and Profile',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/wallet.png',
