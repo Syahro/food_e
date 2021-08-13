@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/change_password_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/header.dart';
 import 'package:food_e/widget/text_field_and_label.dart';
@@ -91,9 +92,21 @@ class AccountAndProfilePage extends StatelessWidget {
               SizedBox(
                 height: 50,
               ),
-              UserMenu(
-                imageUrl: 'assets/icons/password.png',
-                menuTitle: 'Change Password',
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ChangePasswordPage();
+                      },
+                    ),
+                  );
+                },
+                child: UserMenu(
+                  imageUrl: 'assets/icons/password.png',
+                  menuTitle: 'Change Password',
+                ),
               ),
               SizedBox(
                 height: 20,
