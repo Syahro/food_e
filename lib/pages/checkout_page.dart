@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/confirm_order.dart';
 import 'package:food_e/pages/my_address_page.dart';
 import 'package:food_e/pages/my_payment_method_page.dart';
 import 'package:food_e/theme.dart';
@@ -137,7 +138,30 @@ class CheckoutPage extends StatelessWidget {
                 width: double.infinity,
                 height: 40,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ConfirmOrder(
+                            isError: false,
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  onLongPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ConfirmOrder(
+                            isError: true,
+                          );
+                        },
+                      ),
+                    );
+                  },
                   color: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
