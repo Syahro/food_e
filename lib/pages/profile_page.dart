@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_e/pages/account_and_profile_page.dart';
 import 'package:food_e/pages/my_address_page.dart';
 import 'package:food_e/pages/my_payment_method_page.dart';
+import 'package:food_e/pages/order_history_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/user_menu.dart';
@@ -111,9 +112,21 @@ class ProfilePage extends StatelessWidget {
                     menuTitle: 'Manage Addresses',
                   ),
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/history.png',
-                  menuTitle: 'Order History',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return OrderHistoryPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/history.png',
+                    menuTitle: 'Order History',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/bug.png',
