@@ -22,6 +22,7 @@ class ChangePasswordPage extends StatelessWidget {
               headerTitle: 'CHANGE PASSWORD',
               isSubTitle: false,
               subTitle: '',
+              isBack: true,
             ),
             Spacer(),
             TextFieldAndLabel(

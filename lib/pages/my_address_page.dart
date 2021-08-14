@@ -37,6 +37,7 @@ class MyAddressPage extends StatelessWidget {
                 headerTitle: 'MY ADDRESS',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               Spacer(),
               Text(
@@ -104,6 +105,7 @@ class MyAddressPage extends StatelessWidget {
                         builder: (context) {
                           return AddressPage(
                             isSkip: false,
+                            isBack: true,
                           );
                         },
                       ),

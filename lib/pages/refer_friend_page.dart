@@ -22,6 +22,7 @@ class ReferFriendPage extends StatelessWidget {
                 headerTitle: 'REFER to a Friend',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               SizedBox(
                 height: 50,

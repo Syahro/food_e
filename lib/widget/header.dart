@@ -5,11 +5,13 @@ class Header extends StatelessWidget {
   final String headerTitle;
   final bool isSubTitle;
   final String subTitle;
+  final bool isBack;
 
   Header({
     this.headerTitle,
     this.isSubTitle,
     this.subTitle,
+    this.isBack,
   });
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class Header extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image.asset(
-          'assets/icons/close.png',
+          isBack ? 'assets/icons/left.png' : 'assets/icons/close.png',
           width: 22,
           height: 22,
         ),

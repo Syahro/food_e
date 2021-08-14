@@ -24,6 +24,7 @@ class LoginPage extends StatelessWidget {
                 headerTitle: 'LOGIN',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: false,
               ),
               Spacer(),
               TextFieldAndLabel(

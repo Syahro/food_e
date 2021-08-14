@@ -32,6 +32,7 @@ class CheckoutPage extends StatelessWidget {
                 headerTitle: 'CHECKOUT',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               Spacer(),
               Text(

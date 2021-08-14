@@ -25,6 +25,7 @@ class AccountAndProfilePage extends StatelessWidget {
                 headerTitle: 'ACCOUNT AND PROFILE',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               SizedBox(
                 height: 30,

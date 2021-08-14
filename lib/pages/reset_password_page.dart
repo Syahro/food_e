@@ -21,6 +21,7 @@ class ResetPasswordPage extends StatelessWidget {
                 headerTitle: 'RESET PASSWORD',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: false,
               ),
               SizedBox(
                 height: 50,

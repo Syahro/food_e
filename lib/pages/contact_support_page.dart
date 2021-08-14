@@ -21,6 +21,7 @@ class ContactSupportPage extends StatelessWidget {
                 headerTitle: 'CONTACT SUPPORT',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               SizedBox(
                 height: 50,

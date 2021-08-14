@@ -37,6 +37,7 @@ class MyPaymentMethodPage extends StatelessWidget {
                 headerTitle: 'MY PAYMENT METHODS',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               Spacer(),
               Text(
@@ -128,6 +129,7 @@ class MyPaymentMethodPage extends StatelessWidget {
                             isPaymentSetup: false,
                             headerTitle: 'ADD NEW CARD',
                             isSkip: false,
+                            isBack: true,
                           );
                         },
                       ),

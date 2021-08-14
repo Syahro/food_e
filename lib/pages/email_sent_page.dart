@@ -22,6 +22,7 @@ class EmailSentPage extends StatelessWidget {
                 isSubTitle: true,
                 subTitle:
                     'We’ve sent you an email at user@email.com\nfor verification. Check your email for the\nverification link.',
+                    isBack: false,
               ),
               Spacer(),
               Text(

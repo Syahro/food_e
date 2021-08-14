@@ -26,6 +26,7 @@ class OrderHistoryPage extends StatelessWidget {
                     headerTitle: 'ORDER HISTORY',
                     isSubTitle: false,
                     subTitle: '',
+                    isBack: true,
                   ),
                   SizedBox(
                     height: 50,

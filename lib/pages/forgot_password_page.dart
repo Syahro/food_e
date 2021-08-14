@@ -22,6 +22,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 headerTitle: 'FORGOT PASSWORD',
                 isSubTitle: true,
                 subTitle: 'We’ll send a password reset link to your email.',
+                isBack: false,
               ),
               SizedBox(
                 height: 145,

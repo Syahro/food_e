@@ -3,6 +3,11 @@ import 'package:food_e/theme.dart';
 import 'package:food_e/widget/header.dart';
 
 class TermsConditionPage extends StatelessWidget {
+  final String titleHeader;
+
+  TermsConditionPage(
+    this.titleHeader,
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +26,10 @@ class TermsConditionPage extends StatelessWidget {
                     height: 50,
                   ),
                   Header(
-                    headerTitle: 'TERMS AND CONDITIONS',
+                    headerTitle: titleHeader,
                     isSubTitle: false,
                     subTitle: '',
+                    isBack: true,
                   ),
                   SizedBox(
                     height: 50,

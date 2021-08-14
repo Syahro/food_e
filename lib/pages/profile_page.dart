@@ -173,7 +173,7 @@ class ProfilePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return TermsConditionPage();
+                          return TermsConditionPage('TERMS AND CONDITIONS');
                         },
                       ),
                     );
@@ -183,9 +183,21 @@ class ProfilePage extends StatelessWidget {
                     menuTitle: 'Terms and Conditions',
                   ),
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/paper2.png',
-                  menuTitle: 'Privacy Policy',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return TermsConditionPage('PRIVACY POLICY');
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/paper2.png',
+                    menuTitle: 'Privacy Policy',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/logout.png',

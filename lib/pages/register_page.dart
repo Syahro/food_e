@@ -25,6 +25,7 @@ class RegisterPage extends StatelessWidget {
                     headerTitle: 'REGISTER',
                     isSubTitle: false,
                     subTitle: '',
+                    isBack: false,
                   ),
                   SizedBox(
                     height: 130,

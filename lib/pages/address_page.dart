@@ -6,9 +6,11 @@ import 'package:food_e/widget/text_field_and_label.dart';
 
 class AddressPage extends StatelessWidget {
   final bool isSkip;
+  final bool isBack;
 
   AddressPage({
     this.isSkip,
+    this.isBack,
   });
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class AddressPage extends StatelessWidget {
                     headerTitle: 'ADDRESS SETUP',
                     isSubTitle: false,
                     subTitle: '',
+                    isBack: isBack,
                   ),
                   SizedBox(
                     height: 130,

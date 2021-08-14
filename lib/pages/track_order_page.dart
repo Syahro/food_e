@@ -22,6 +22,7 @@ class TrackOrderPage extends StatelessWidget {
                 headerTitle: '08 July 2021',
                 isSubTitle: false,
                 subTitle: '',
+                isBack: true,
               ),
               SizedBox(
                 height: 10,

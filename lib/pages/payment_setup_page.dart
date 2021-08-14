@@ -8,11 +8,13 @@ class PaymentSetupPage extends StatelessWidget {
   final bool isPaymentSetup;
   final String headerTitle;
   final bool isSkip;
+  final bool isBack;
 
   PaymentSetupPage({
     this.isPaymentSetup,
     this.headerTitle,
     this.isSkip,
+    this.isBack,
   });
   @override
   Widget build(BuildContext context) {
@@ -28,10 +30,10 @@ class PaymentSetupPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Header(
-                headerTitle:
-                    isPaymentSetup ? 'PAYMENT SETUP' : headerTitle,
+                headerTitle: isPaymentSetup ? 'PAYMENT SETUP' : headerTitle,
                 isSubTitle: false,
                 subTitle: '',
+                isBack: isBack,
               ),
               Column(
                 children: [
