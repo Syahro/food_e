@@ -5,6 +5,7 @@ import 'package:food_e/pages/my_address_page.dart';
 import 'package:food_e/pages/my_payment_method_page.dart';
 import 'package:food_e/pages/order_history_page.dart';
 import 'package:food_e/pages/refer_friend_page.dart';
+import 'package:food_e/pages/terms_condition_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/user_menu.dart';
@@ -166,9 +167,21 @@ class ProfilePage extends StatelessWidget {
                   imageUrl: 'assets/icons/star.png',
                   menuTitle: 'Write a Review',
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/paper.png',
-                  menuTitle: 'Terms and Conditions',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return TermsConditionPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/paper.png',
+                    menuTitle: 'Terms and Conditions',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/paper2.png',
