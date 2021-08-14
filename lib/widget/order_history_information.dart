@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_e/pages/track_order_page.dart';
 
 import '../theme.dart';
 
@@ -7,14 +8,14 @@ class OrderHistoryInformation extends StatelessWidget {
   final int totalInfo;
   final int itemsInfo;
   final String textButton;
-  final bool isFilledButton;
+  final bool isTrack;
 
   OrderHistoryInformation({
     this.dateInfo,
     this.totalInfo,
     this.itemsInfo,
     this.textButton,
-    this.isFilledButton,
+    this.isTrack,
   });
   @override
   Widget build(BuildContext context) {
@@ -56,19 +57,30 @@ class OrderHistoryInformation extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: isFilledButton ? Colors.transparent : primaryColor,
+                color: isTrack ? Colors.transparent : primaryColor,
                 width: 2,
               )),
           child: RaisedButton(
-            onPressed: () {},
-            color: isFilledButton ? primaryColor : whiteColor,
+            onPressed: isTrack
+                ? () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return TrackOrderPage();
+                        },
+                      ),
+                    );
+                  }
+                : () {},
+            color: isTrack ? primaryColor : whiteColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
               textButton,
               style: headingThreeText.copyWith(
-                color: isFilledButton ? whiteColor : primaryColor,
+                color: isTrack ? whiteColor : primaryColor,
               ),
             ),
           ),
