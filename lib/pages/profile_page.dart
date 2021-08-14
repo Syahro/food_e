@@ -4,6 +4,7 @@ import 'package:food_e/pages/contact_support_page.dart';
 import 'package:food_e/pages/my_address_page.dart';
 import 'package:food_e/pages/my_payment_method_page.dart';
 import 'package:food_e/pages/order_history_page.dart';
+import 'package:food_e/pages/refer_friend_page.dart';
 import 'package:food_e/theme.dart';
 import 'package:food_e/widget/bottom_floating.dart';
 import 'package:food_e/widget/user_menu.dart';
@@ -145,9 +146,21 @@ class ProfilePage extends StatelessWidget {
                     menuTitle: 'Contact Support',
                   ),
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/gift.png',
-                  menuTitle: 'Refer to a Friend',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ReferFriendPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/gift.png',
+                    menuTitle: 'Refer to a Friend',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/star.png',
