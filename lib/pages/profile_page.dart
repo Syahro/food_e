@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_e/pages/account_and_profile_page.dart';
+import 'package:food_e/pages/contact_support_page.dart';
 import 'package:food_e/pages/my_address_page.dart';
 import 'package:food_e/pages/my_payment_method_page.dart';
 import 'package:food_e/pages/order_history_page.dart';
@@ -128,9 +129,21 @@ class ProfilePage extends StatelessWidget {
                     menuTitle: 'Order History',
                   ),
                 ),
-                UserMenu(
-                  imageUrl: 'assets/icons/bug.png',
-                  menuTitle: 'Contact Support',
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ContactSupportPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: UserMenu(
+                    imageUrl: 'assets/icons/bug.png',
+                    menuTitle: 'Contact Support',
+                  ),
                 ),
                 UserMenu(
                   imageUrl: 'assets/icons/gift.png',
